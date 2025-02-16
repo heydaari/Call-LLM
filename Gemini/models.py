@@ -10,7 +10,7 @@ class Gemini:
 
         self.model = genai.GenerativeModel(model_name= model_name, tools= tools)
         self.model_name = model_name
-        self.key = key
+        self.api_key = key
         self.chat = None
 
     def __call__(self,

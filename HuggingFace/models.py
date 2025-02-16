@@ -36,3 +36,12 @@ class HuggingFaceInference:
 
     def reset_history(self):
         self.chat_history = []
+
+
+class HuggingFaceLocalModel:
+    def __init__(self,
+                 model_name: str,
+                 key : str = None):
+
+        self.model_name = model_name
+        self.api_key = key

@@ -18,7 +18,7 @@ class OllamaModel:
             model_stream = chat(model=self.model_name, messages=messages, stream=True)
             return model_stream
 
-        response_text = chat(model=self.model_name, messages=messages)
+        response_text : ChatResponse = chat(model=self.model_name, messages=messages)
         response_text = response_text['message']['content']
 
         self.chat_history.append({"role": "user", "content": prompt})
