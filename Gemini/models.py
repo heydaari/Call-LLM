@@ -18,19 +18,7 @@ class Gemini:
                  with_history: bool = True,
                  generation_config: dict = None):
 
-        """
-        Calls the Gemini model to generate content.
 
-        Args:
-            prompt: The text prompt to send to the model.
-            with_history: A boolean indicating whether to use the previous session history.
-                         Defaults to True.
-            generation_config: A dictionary containing generation parameters like temperature, top_p, and max_output_tokens.
-                               Defaults to None (using model defaults).
-
-        Returns:
-            The generated content from the model.
-        """
 
         if generation_config is None:
             generation_config = {}
@@ -47,7 +35,4 @@ class Gemini:
         return response.text
 
     def reset_chat(self):
-        """
-        Resets the chat session, clearing the history.
-        """
         self.chat = None
